@@ -5,7 +5,7 @@ import unittest
 
 
 class TestGammaWrongResponseType(unittest.TestCase):
-    def test_testcase(self):
+    def test_response_error(self):
         assert H2OXGBoostEstimator.available()
 
         prostate_frame = h2o.import_file(path=pyunit_utils.locate("smalldata/prostate/prostate_complete.csv.zip"))
@@ -25,7 +25,7 @@ class TestGammaWrongResponseType(unittest.TestCase):
 
 
 def xgboost_prostate_gamma_wrong_response_small():
-    TestGammaWrongResponseType().test_testcase();
+    TestGammaWrongResponseType().test_response_error();
 
 
 if __name__ == "__main__":
